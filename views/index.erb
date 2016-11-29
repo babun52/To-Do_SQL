@@ -3,14 +3,14 @@
 <p>Here are all your tasks:</p>
 
 <ul>
-  <% @tasks.each() do |task| %>
+  <% @task.each() do |task| %>
     <li><%= task.description() %></li>
   <% end %>
 </ul>
 
 <p>Create a new task:</p>
 
-<form action="/tasks" method="post">
+<form action="/task" method="post">
   <label for="description">Task Description</label>
   <input id="description" name="description" type="text">
 

@@ -8,7 +8,7 @@ get('/') do
   erb(:index)
 end
 
-post("/tasks") do
+post("/task") do
   description = params.fetch("description")
   task = Task.new(description)
   task.save()
