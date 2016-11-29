@@ -20,4 +20,11 @@ describe('Task') do
       expect(Task.all()).to(eq([new_task]))
     end
   end
+  describe('.clear') do
+    it("empties out all of the saved tasks") do
+      Task.new("wash the lion").save()
+      Task.clear()
+      expect(Task.all()).to(eq([]))
+    end
+  end
 end
